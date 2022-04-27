@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66201E3628197029005FBA24 /* EmergencyNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66201E3528197029005FBA24 /* EmergencyNumbers.swift */; };
+		66508B9C281943FA00CE0290 /* List-Of-Emergency-Telephone-Numbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 66508B9B281943FA00CE0290 /* List-Of-Emergency-Telephone-Numbers.json */; };
+		66508B9E2819453200CE0290 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66508B9D2819453200CE0290 /* SettingsViewController.swift */; };
 		667875E228183A2900C43DF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667875E128183A2900C43DF9 /* AppDelegate.swift */; };
 		667875E428183A2900C43DF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667875E328183A2900C43DF9 /* SceneDelegate.swift */; };
-		667875E628183A2900C43DF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667875E528183A2900C43DF9 /* ViewController.swift */; };
+		667875E628183A2900C43DF9 /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667875E528183A2900C43DF9 /* EmergencyViewController.swift */; };
 		667875E928183A2900C43DF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 667875E728183A2900C43DF9 /* Main.storyboard */; };
 		667875EC28183A2900C43DF9 /* SOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 667875EA28183A2900C43DF9 /* SOS.xcdatamodeld */; };
 		667875EE28183A2A00C43DF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 667875ED28183A2A00C43DF9 /* Assets.xcassets */; };
@@ -17,10 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66201E3528197029005FBA24 /* EmergencyNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyNumbers.swift; sourceTree = "<group>"; };
+		66508B9B281943FA00CE0290 /* List-Of-Emergency-Telephone-Numbers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "List-Of-Emergency-Telephone-Numbers.json"; sourceTree = "<group>"; };
+		66508B9D2819453200CE0290 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		667875DE28183A2900C43DF9 /* SOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		667875E128183A2900C43DF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		667875E328183A2900C43DF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		667875E528183A2900C43DF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		667875E528183A2900C43DF9 /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		667875E828183A2900C43DF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		667875EB28183A2900C43DF9 /* SOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SOS.xcdatamodel; sourceTree = "<group>"; };
 		667875ED28183A2A00C43DF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,12 +66,15 @@
 			children = (
 				667875E128183A2900C43DF9 /* AppDelegate.swift */,
 				667875E328183A2900C43DF9 /* SceneDelegate.swift */,
-				667875E528183A2900C43DF9 /* ViewController.swift */,
+				667875E528183A2900C43DF9 /* EmergencyViewController.swift */,
+				66508B9D2819453200CE0290 /* SettingsViewController.swift */,
 				667875E728183A2900C43DF9 /* Main.storyboard */,
 				667875ED28183A2A00C43DF9 /* Assets.xcassets */,
 				667875EF28183A2A00C43DF9 /* LaunchScreen.storyboard */,
 				667875F228183A2A00C43DF9 /* Info.plist */,
 				667875EA28183A2900C43DF9 /* SOS.xcdatamodeld */,
+				66508B9B281943FA00CE0290 /* List-Of-Emergency-Telephone-Numbers.json */,
+				66201E3528197029005FBA24 /* EmergencyNumbers.swift */,
 			);
 			path = SOS;
 			sourceTree = "<group>";
@@ -128,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66508B9C281943FA00CE0290 /* List-Of-Emergency-Telephone-Numbers.json in Resources */,
 				667875F128183A2A00C43DF9 /* LaunchScreen.storyboard in Resources */,
 				667875EE28183A2A00C43DF9 /* Assets.xcassets in Resources */,
 				667875E928183A2900C43DF9 /* Main.storyboard in Resources */,
@@ -141,9 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				667875E628183A2900C43DF9 /* ViewController.swift in Sources */,
+				667875E628183A2900C43DF9 /* EmergencyViewController.swift in Sources */,
 				667875EC28183A2900C43DF9 /* SOS.xcdatamodeld in Sources */,
+				66201E3628197029005FBA24 /* EmergencyNumbers.swift in Sources */,
 				667875E228183A2900C43DF9 /* AppDelegate.swift in Sources */,
+				66508B9E2819453200CE0290 /* SettingsViewController.swift in Sources */,
 				667875E428183A2900C43DF9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
