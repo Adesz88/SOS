@@ -6601,7 +6601,7 @@
   },
   {
     "Country": {
-      "Name": "Tanzania, United Republic of",
+      "Name": "Tanzania",
       "ISOCode": "TZ",
       "ISONumeric": "834"
     },
@@ -7080,36 +7080,6 @@
       ]
     },
     "Member_112": true,
-    "LocalOnly": false,
-    "Notes": null
-  },
-  {
-    "Country": {
-      "Name": "United States Minor Outlying Islands",
-      "ISOCode": "UM",
-      "ISONumeric": "581"
-    },
-    "Ambulance": {
-      "All": [
-        null
-      ]
-    },
-    "Fire": {
-      "All": [
-        null
-      ]
-    },
-    "Police": {
-      "All": [
-        null
-      ]
-    },
-    "Dispatch": {
-      "All": [
-        null
-      ]
-    },
-    "Member_112": false,
     "LocalOnly": false,
     "Notes": null
   },

@@ -12,12 +12,11 @@ import CoreLocation
 class EmergencyViewController: UIViewController{
     let locationManager = CLLocationManager()
     
-    @IBOutlet var Input: UITextField!
     @IBOutlet var Label: UILabel!
-    @IBOutlet var Button: UIButton!
     @IBOutlet var LocationLabel: UILabel!
     
     var ememergencyNumbers: EmergencyNumbers?
+    var country: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +25,6 @@ class EmergencyViewController: UIViewController{
         Button.clipsToBounds = true*/
         
         ParseJSON()
-        print((ememergencyNumbers?.numbers[0].Police.All.first)!!)
         
         locationManager.requestWhenInUseAuthorization()
         if (CLLocationManager.locationServicesEnabled()){
@@ -35,17 +33,59 @@ class EmergencyViewController: UIViewController{
         }
     }
     
-    @IBAction func ButtonPressed(_ sender: UIButton) {
-        for number in (ememergencyNumbers?.numbers)! {
-            if (number.Country.ISOCode == Input.text){
-                Label.text = number.Police.All.first!!
-            }
-        }
-    }
-    
-    
     @IBAction func LocationButtonPressed(_ sender: UIButton) {
         locationManager.startUpdatingLocation()
+    }
+    
+    func showSOSActionSheet(){
+        print(country!)
+        
+        let actionSheet = UIAlertController(title: "Hívás", message: "Melyik szervet szeretnéd felhívni?", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Mentő", style: .default, handler: { action in
+            for number in (self.ememergencyNumbers?.numbers)! {
+                if (number.Country.Name.contains(self.country!)){
+                    let phoneNumber = number.Ambulance.All.first!!
+                    self.manageSOSAction(type: "Mentő", phoneNumber: Int(phoneNumber)!)
+                    return
+                }
+            }
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Rendőr", style: .default, handler: { action in
+            for number in (self.ememergencyNumbers?.numbers)! {
+                if (number.Country.Name.contains(self.country!)){
+                    let phoneNumber = number.Police.All.first!!
+                    self.manageSOSAction(type: "Rendőr", phoneNumber: Int(phoneNumber)!)
+                    return
+                }
+            }
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Tűzoltó", style: .default, handler: { action in
+            for number in (self.ememergencyNumbers?.numbers)! {
+                if (number.Country.Name.contains(self.country!)){
+                    let phoneNumber = number.Fire.All.first!!
+                    self.manageSOSAction(type: "Tűzoltó", phoneNumber: Int(phoneNumber)!)
+                    return
+                }
+            }
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Mégse", style: .cancel, handler: nil))
+        present(actionSheet, animated: true)
+    }
+    
+    func manageSOSAction(type: String, phoneNumber: Int){
+        Label.text = ("\(type) hívása \(phoneNumber) számon")
+        print("call \(type) with \(phoneNumber)")
+    }
+    
+    func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
+        CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
+            completion(placemarks?.first?.locality,
+                       placemarks?.first?.country,
+                       error)
+        }
     }
     
     private func ParseJSON(){
@@ -71,13 +111,20 @@ class EmergencyViewController: UIViewController{
 
 extension EmergencyViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locationValue: CLLocationCoordinate2D = manager.location?.coordinate else{
-            return
-            
-        }
-        print("locations = \(locationValue.latitude) \(locationValue.longitude)")
-        LocationLabel.text = "\(locationValue.latitude) \(locationValue.longitude)"
+        guard let coordinate: CLLocationCoordinate2D = manager.location?.coordinate else{return}
+        guard let location: CLLocation = manager.location else { return }
+        
         locationManager.stopUpdatingLocation()
+        
+        print("locations = \(coordinate.latitude) \(coordinate.longitude)")
+        LocationLabel.text = "\(coordinate.latitude) \(coordinate.longitude)"
+        
+        fetchCityAndCountry(from: location) { city, country, error in
+            guard let city = city, country != nil, error == nil else { return }
+            self.country = country
+            print(city + ", " + self.country!)
+            self.showSOSActionSheet()
+            }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
