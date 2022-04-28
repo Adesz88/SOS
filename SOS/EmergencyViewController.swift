@@ -39,7 +39,7 @@ class EmergencyViewController: UIViewController{
     
     func showSOSActionSheet(){
         print(country!)
-        
+        //TODO: boilerplate kód
         let actionSheet = UIAlertController(title: "Hívás", message: "Melyik szervet szeretnéd felhívni?", preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Mentő", style: .default, handler: { action in
             for number in (self.ememergencyNumbers?.numbers)! {
@@ -76,7 +76,10 @@ class EmergencyViewController: UIViewController{
     }
     
     func manageSOSAction(type: String, phoneNumber: Int){
-        Label.text = ("\(type) hívása \(phoneNumber) számon")
+        let alert = UIAlertController(title: "Hívás", message: "\(type) hívása \(phoneNumber) számon", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        present(alert, animated: true)
+        Label.text = "\(type) hívása \(phoneNumber) számon"
         print("call \(type) with \(phoneNumber)")
     }
     
