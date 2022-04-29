@@ -150,6 +150,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fp-K6-EXQ">
+                                        <rect key="frame" x="305" y="52" width="67" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="updateButtonPressed:" destination="xOl-zA-EUP" eventType="touchUpInside" id="LRu-HZ-TZC"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="epY-It-cHU"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="bq9-nd-VXj"/>
@@ -165,6 +174,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Beállítások" image="gear" catalog="system" id="fH6-gC-D3f"/>
+                    <connections>
+                        <outlet property="TAJTextField" destination="Lif-b4-XO7" id="m3B-aQ-sFt"/>
+                        <outlet property="nameTextField" destination="P0w-Yh-6Yo" id="zpD-X2-uPW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0q-11-XfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
