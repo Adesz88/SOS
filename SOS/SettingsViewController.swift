@@ -13,11 +13,13 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var TAJTextField: UITextField!
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var users: [NSManagedObject] = []
-
+    
     override func viewWillAppear(_ animated: Bool) {
-        saveUser()
+        //saveUser()
         loadUser()
+        print(users)
     }
     
     override func viewDidLoad() {
@@ -25,21 +27,14 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func editButtonPressed(_ sender: UIButton) {
-        editUser()
-    }
+    
     
     func loadUser(){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
         
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
         
         do {
-            users = try managedContext.fetch(fetchRequest)
+            users = try context.fetch(fetchRequest)
         } catch let error {
             print(error)
         }
@@ -49,21 +44,16 @@ class SettingsViewController: UIViewController {
     }
     
     func saveUser(){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            return
-        }
         
-        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
         
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)
-        
-        let user = NSManagedObject(entity: entity!, insertInto: managedContext)
+        let user = NSManagedObject(entity: entity!, insertInto: context)
         //TODO: mentés
         user.setValue("Test user", forKey: "name")
         user.setValue(123456789, forKey: "taj_number")
         
         do {
-            try managedContext.save()
+            try context.save()
             loadUser()
         } catch let error {
             print(error)
@@ -72,6 +62,14 @@ class SettingsViewController: UIViewController {
     
     func editUser(){
         
+        users[0].setValue("user", forKey: "name")
+        
+        do {
+            try context.save()
+            loadUser()
+        } catch let error {
+            print(error)
+        }
     }
     
     /*TODO: edit user

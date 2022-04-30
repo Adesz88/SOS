@@ -78,13 +78,13 @@
         <!--Beállítások-->
         <scene sceneID="PtK-9O-cZD">
             <objects>
-                <viewController id="xOl-zA-EUP" customClass="SettingsViewController" customModule="SOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xOl-zA-EUP" customClass="SettingsViewController" customModule="SOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6wS-p4-wRG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" keyboardDismissMode="onDrag" id="u0z-yg-r9a">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Név" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P0w-Yh-6Yo">
@@ -150,13 +150,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fp-K6-EXQ">
-                                        <rect key="frame" x="305" y="52" width="67" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLj-rS-ubJ">
+                                        <rect key="frame" x="174" y="289" width="67" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                         <connections>
-                                            <action selector="updateButtonPressed:" destination="xOl-zA-EUP" eventType="touchUpInside" id="LRu-HZ-TZC"/>
+                                            <action selector="Button:" destination="xOl-zA-EUP" eventType="touchUpInside" id="qJ0-ll-SNm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -169,11 +169,27 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wZ3-De-p0d">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="7Ea-Jm-eJM">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="q3f-4z-Rmf">
+                                            <connections>
+                                                <segue destination="nLp-GU-Vc5" kind="popoverPresentation" popoverAnchorBarButtonItem="q3f-4z-Rmf" id="yLw-mO-Qlr">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TI0-gh-TyB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Beállítások" image="gear" catalog="system" id="fH6-gC-D3f"/>
+                    <navigationItem key="navigationItem" id="UhF-HK-GQF"/>
                     <connections>
                         <outlet property="TAJTextField" destination="Lif-b4-XO7" id="m3B-aQ-sFt"/>
                         <outlet property="nameTextField" destination="P0w-Yh-6Yo" id="zpD-X2-uPW"/>
@@ -182,6 +198,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0q-11-XfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="242.0289855072464" y="-33.482142857142854"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="5DX-ji-Uc9">
+            <objects>
+                <viewController id="nLp-GU-Vc5" customClass="EditViewController" customModule="SOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UFu-gT-0fr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NXg-Eu-vbi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="rGP-AC-bov">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="v5d-RO-4E5">
+                                            <connections>
+                                                <action selector="SaveButton:" destination="nLp-GU-Vc5" id="LeU-PY-7Or"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I4p-Yc-vWv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dji-4J-0F8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="-33"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Auf-0u-bgS">
