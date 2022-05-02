@@ -120,7 +120,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eWZ-v8-BDd" userLabel="TAJ Stack View">
-                                                <rect key="frame" x="20" y="134" width="374" height="34"/>
+                                                <rect key="frame" x="20" y="218" width="374" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAJ szám" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDL-oH-Nar">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
@@ -148,7 +148,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YkN-5N-MLN" userLabel="Birth place Stack View">
-                                                <rect key="frame" x="20" y="218" width="374" height="34"/>
+                                                <rect key="frame" x="20" y="302" width="374" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Születési hely" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrA-Me-TYe">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
@@ -163,7 +163,7 @@
                                                         <rect key="frame" x="130" y="0.0" width="244" height="34"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="address-level2"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -173,7 +173,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qWf-X1-eXj" userLabel="Birth date Stack View">
-                                                <rect key="frame" x="20" y="302" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="386" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Születési idő" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSK-4D-3IK">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
@@ -196,7 +196,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EVr-TY-XEe" userLabel="Blood type Stack View">
-                                                <rect key="frame" x="20" y="402" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="486" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vércsoport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tx-sm-YFL">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -221,7 +221,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Etm-6N-Rad" userLabel="Diseases Stack View">
-                                                <rect key="frame" x="20" y="502" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="586" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betegségek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUh-0j-v0L">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -250,7 +250,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NWR-Iq-ORc" userLabel="Medicines Stack View">
-                                                <rect key="frame" x="20" y="602" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="686" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Szedett gyógyszerek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yn-YN-hyF">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -279,7 +279,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KHR-3i-6P7" userLabel="SMS text Stack View">
-                                                <rect key="frame" x="20" y="702" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="786" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMS szöveg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tf-Ke-lpu">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -296,6 +296,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="tg6-TO-5y5"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
@@ -305,8 +306,8 @@
                                                     <constraint firstItem="5Tf-Ke-lpu" firstAttribute="top" secondItem="KHR-3i-6P7" secondAttribute="top" id="xZL-2p-WXg"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r4L-vZ-CXC" userLabel="Name Stack View">
-                                                <rect key="frame" x="20" y="802" width="374" height="34"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r4L-vZ-CXC" userLabel="Contact name Stack View">
+                                                <rect key="frame" x="20" y="886" width="374" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hozzátartzó neve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jb0-9z-hN9">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="34"/>
@@ -317,7 +318,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dEq-d4-wGE">
+                                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dEq-d4-wGE" userLabel="Contact Name Text Field">
                                                         <rect key="frame" x="170" y="0.0" width="204" height="34"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -333,8 +334,8 @@
                                                     <constraint firstAttribute="trailing" secondItem="dEq-d4-wGE" secondAttribute="trailing" id="qCa-Sl-sXf"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pRx-Lc-8zM" userLabel="Name Stack View">
-                                                <rect key="frame" x="20" y="886" width="374" height="34"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pRx-Lc-8zM" userLabel="Contact phone Stack View">
+                                                <rect key="frame" x="20" y="970" width="374" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefonszáma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvK-nN-iFm">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="34"/>
@@ -345,7 +346,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sw8-dB-UgF">
+                                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sw8-dB-UgF" userLabel="Contact Phone Text Field">
                                                         <rect key="frame" x="170" y="0.0" width="204" height="34"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -362,50 +363,74 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReS-55-QcZ">
-                                                <rect key="frame" x="20" y="970" width="374" height="31"/>
+                                                <rect key="frame" x="20" y="1054" width="374" height="31"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Adatok törlése"/>
+                                                <connections>
+                                                    <action selector="DeleteButtonPressed:" destination="xOl-zA-EUP" eventType="touchUpInside" id="E0M-sp-gAe"/>
+                                                </connections>
                                             </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WWi-zP-DoH" userLabel="Address Stack View">
+                                                <rect key="frame" x="20" y="134" width="374" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lakcím" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyk-68-zOq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="120" id="X73-3Z-l4Q"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wvm-BD-J52">
+                                                        <rect key="frame" x="130" y="0.0" width="244" height="34"/>
+                                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="r4L-vZ-CXC" firstAttribute="top" secondItem="KHR-3i-6P7" secondAttribute="bottom" constant="50" id="0K0-bE-xfz"/>
+                                            <constraint firstItem="ReS-55-QcZ" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="0fS-qA-jC4"/>
                                             <constraint firstItem="bHy-Xz-lfu" firstAttribute="centerX" secondItem="8VA-VD-urv" secondAttribute="centerX" id="2lK-5S-3AE"/>
-                                            <constraint firstItem="eWZ-v8-BDd" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="60h-Gx-RIY"/>
+                                            <constraint firstAttribute="trailing" secondItem="r4L-vZ-CXC" secondAttribute="trailing" constant="20" id="4Qj-QB-chy"/>
+                                            <constraint firstItem="YkN-5N-MLN" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="5gB-iu-zk2"/>
+                                            <constraint firstItem="Etm-6N-Rad" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="9pU-X7-a7a"/>
                                             <constraint firstAttribute="height" constant="2000" id="A0C-h5-vMZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="YkN-5N-MLN" secondAttribute="trailing" constant="20" id="BcV-kB-iPa"/>
-                                            <constraint firstItem="qWf-X1-eXj" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="JEx-XR-Vd0"/>
-                                            <constraint firstItem="eWZ-v8-BDd" firstAttribute="top" secondItem="bHy-Xz-lfu" secondAttribute="bottom" constant="50" id="JIc-dh-z4P"/>
-                                            <constraint firstItem="YkN-5N-MLN" firstAttribute="top" secondItem="eWZ-v8-BDd" secondAttribute="bottom" constant="50" id="Kli-1u-gOD"/>
-                                            <constraint firstItem="KHR-3i-6P7" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="L9v-RT-eZt"/>
-                                            <constraint firstItem="ReS-55-QcZ" firstAttribute="top" secondItem="pRx-Lc-8zM" secondAttribute="bottom" constant="50" id="LkZ-tS-vao"/>
-                                            <constraint firstAttribute="trailing" secondItem="NWR-Iq-ORc" secondAttribute="trailing" constant="20" id="LnC-bn-0Ri"/>
-                                            <constraint firstItem="pRx-Lc-8zM" firstAttribute="top" secondItem="r4L-vZ-CXC" secondAttribute="bottom" constant="50" id="LnU-kz-uQO"/>
-                                            <constraint firstAttribute="trailing" secondItem="KHR-3i-6P7" secondAttribute="trailing" constant="20" id="Psn-Gm-cty"/>
+                                            <constraint firstAttribute="trailing" secondItem="YkN-5N-MLN" secondAttribute="trailing" constant="20" id="B8M-y5-A1E"/>
+                                            <constraint firstItem="EVr-TY-XEe" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="CzO-CO-Kes"/>
+                                            <constraint firstItem="eWZ-v8-BDd" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="ES4-Se-uHr"/>
+                                            <constraint firstAttribute="trailing" secondItem="pRx-Lc-8zM" secondAttribute="trailing" constant="20" id="EdG-2W-127"/>
+                                            <constraint firstItem="KHR-3i-6P7" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="FGH-O0-mTm"/>
+                                            <constraint firstItem="WWi-zP-DoH" firstAttribute="top" secondItem="bHy-Xz-lfu" secondAttribute="bottom" constant="50" id="N6f-Br-UsG"/>
+                                            <constraint firstItem="NWR-Iq-ORc" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="OSL-0L-lHq"/>
+                                            <constraint firstItem="NWR-Iq-ORc" firstAttribute="top" secondItem="Etm-6N-Rad" secondAttribute="bottom" constant="50" id="Olw-dp-ZER"/>
+                                            <constraint firstAttribute="trailing" secondItem="EVr-TY-XEe" secondAttribute="trailing" constant="20" id="P5e-Go-W2Z"/>
+                                            <constraint firstItem="pRx-Lc-8zM" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="PvJ-Dy-pjX"/>
                                             <constraint firstItem="bHy-Xz-lfu" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="Q8A-CE-5ZR"/>
-                                            <constraint firstAttribute="trailing" secondItem="eWZ-v8-BDd" secondAttribute="trailing" constant="20" id="R6b-nD-uHE"/>
-                                            <constraint firstItem="ReS-55-QcZ" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="ROQ-nS-lyf"/>
-                                            <constraint firstItem="EVr-TY-XEe" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="UhP-Qr-Ko7"/>
-                                            <constraint firstAttribute="trailing" secondItem="EVr-TY-XEe" secondAttribute="trailing" constant="20" id="WVq-pM-RsW"/>
-                                            <constraint firstItem="NWR-Iq-ORc" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="ZTi-Ji-Cyr"/>
-                                            <constraint firstItem="Etm-6N-Rad" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="cIN-G0-EYQ"/>
-                                            <constraint firstAttribute="trailing" secondItem="ReS-55-QcZ" secondAttribute="trailing" constant="20" id="dgY-8B-wDn"/>
-                                            <constraint firstItem="EVr-TY-XEe" firstAttribute="top" secondItem="qWf-X1-eXj" secondAttribute="bottom" constant="50" id="eBh-Ff-57K"/>
-                                            <constraint firstItem="eWZ-v8-BDd" firstAttribute="centerX" secondItem="8VA-VD-urv" secondAttribute="centerX" id="fcQ-2R-lxp"/>
-                                            <constraint firstItem="KHR-3i-6P7" firstAttribute="top" secondItem="NWR-Iq-ORc" secondAttribute="bottom" constant="50" id="gNt-L6-ebl"/>
-                                            <constraint firstItem="r4L-vZ-CXC" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="ghG-EO-Sxw"/>
-                                            <constraint firstAttribute="trailing" secondItem="pRx-Lc-8zM" secondAttribute="trailing" constant="20" id="hhH-od-dhK"/>
-                                            <constraint firstAttribute="trailing" secondItem="Etm-6N-Rad" secondAttribute="trailing" constant="20" id="hwS-Qk-zIx"/>
-                                            <constraint firstItem="YkN-5N-MLN" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="i3v-7a-7GE"/>
+                                            <constraint firstItem="EVr-TY-XEe" firstAttribute="top" secondItem="qWf-X1-eXj" secondAttribute="bottom" constant="50" id="S1O-lI-ePL"/>
+                                            <constraint firstAttribute="trailing" secondItem="WWi-zP-DoH" secondAttribute="trailing" constant="20" id="WgV-lG-era"/>
+                                            <constraint firstItem="Etm-6N-Rad" firstAttribute="top" secondItem="EVr-TY-XEe" secondAttribute="bottom" constant="50" id="WyV-yU-EbX"/>
+                                            <constraint firstItem="eWZ-v8-BDd" firstAttribute="top" secondItem="WWi-zP-DoH" secondAttribute="bottom" constant="50" id="afp-0d-adJ"/>
+                                            <constraint firstItem="qWf-X1-eXj" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="bMf-To-Qhi"/>
+                                            <constraint firstItem="pRx-Lc-8zM" firstAttribute="top" secondItem="r4L-vZ-CXC" secondAttribute="bottom" constant="50" id="cK8-2H-H3F"/>
+                                            <constraint firstAttribute="trailing" secondItem="qWf-X1-eXj" secondAttribute="trailing" constant="20" id="eSJ-qP-X8q"/>
+                                            <constraint firstAttribute="trailing" secondItem="ReS-55-QcZ" secondAttribute="trailing" constant="20" id="fqb-DU-5fC"/>
                                             <constraint firstItem="bHy-Xz-lfu" firstAttribute="top" secondItem="8VA-VD-urv" secondAttribute="top" constant="50" id="iaH-IH-Alr"/>
-                                            <constraint firstAttribute="trailing" secondItem="r4L-vZ-CXC" secondAttribute="trailing" constant="20" id="ju4-xy-Zlf"/>
+                                            <constraint firstItem="r4L-vZ-CXC" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="jkD-PX-JEQ"/>
                                             <constraint firstAttribute="trailing" secondItem="bHy-Xz-lfu" secondAttribute="trailing" constant="20" id="kRP-gM-Tgl"/>
-                                            <constraint firstItem="qWf-X1-eXj" firstAttribute="top" secondItem="YkN-5N-MLN" secondAttribute="bottom" constant="50" id="m0h-Lc-Mbv"/>
-                                            <constraint firstAttribute="trailing" secondItem="qWf-X1-eXj" secondAttribute="trailing" constant="20" id="qFC-Ha-Njl"/>
-                                            <constraint firstItem="YkN-5N-MLN" firstAttribute="centerX" secondItem="8VA-VD-urv" secondAttribute="centerX" id="qyS-k8-DoJ"/>
-                                            <constraint firstItem="NWR-Iq-ORc" firstAttribute="top" secondItem="Etm-6N-Rad" secondAttribute="bottom" constant="50" id="uee-2G-095"/>
-                                            <constraint firstItem="Etm-6N-Rad" firstAttribute="top" secondItem="EVr-TY-XEe" secondAttribute="bottom" constant="50" id="wWc-0L-wIn"/>
-                                            <constraint firstItem="pRx-Lc-8zM" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="yXt-V9-jYB"/>
+                                            <constraint firstAttribute="trailing" secondItem="Etm-6N-Rad" secondAttribute="trailing" constant="20" id="kTy-5Y-VKF"/>
+                                            <constraint firstItem="YkN-5N-MLN" firstAttribute="top" secondItem="eWZ-v8-BDd" secondAttribute="bottom" constant="50" id="kcr-ZR-K3S"/>
+                                            <constraint firstItem="KHR-3i-6P7" firstAttribute="top" secondItem="NWR-Iq-ORc" secondAttribute="bottom" constant="50" id="lZj-bL-oKn"/>
+                                            <constraint firstItem="qWf-X1-eXj" firstAttribute="top" secondItem="YkN-5N-MLN" secondAttribute="bottom" constant="50" id="mc3-nr-XLz"/>
+                                            <constraint firstAttribute="trailing" secondItem="NWR-Iq-ORc" secondAttribute="trailing" constant="20" id="qYV-qP-16r"/>
+                                            <constraint firstAttribute="trailing" secondItem="eWZ-v8-BDd" secondAttribute="trailing" constant="20" id="tBF-Yi-fhg"/>
+                                            <constraint firstAttribute="trailing" secondItem="KHR-3i-6P7" secondAttribute="trailing" constant="20" id="wpu-3P-eyc"/>
+                                            <constraint firstItem="ReS-55-QcZ" firstAttribute="top" secondItem="pRx-Lc-8zM" secondAttribute="bottom" constant="50" id="wvp-ga-SUc"/>
+                                            <constraint firstItem="r4L-vZ-CXC" firstAttribute="top" secondItem="KHR-3i-6P7" secondAttribute="bottom" constant="50" id="xYO-y2-8wg"/>
+                                            <constraint firstItem="WWi-zP-DoH" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="yYQ-vO-Sfc"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -437,7 +462,17 @@
                     <tabBarItem key="tabBarItem" title="Beállítások" image="gear" catalog="system" id="fH6-gC-D3f"/>
                     <connections>
                         <outlet property="NameTextField" destination="u8z-xx-UJR" id="an0-Py-hzW"/>
+                        <outlet property="SMSTextView" destination="fbj-6j-bZ5" id="6ZO-29-p5n"/>
                         <outlet property="TAJTextField" destination="8MI-1J-G8e" id="ISu-5Y-BPF"/>
+                        <outlet property="addressTextField" destination="Wvm-BD-J52" id="zjd-jD-DXR"/>
+                        <outlet property="birthDatePicker" destination="s8F-ji-R9y" id="HUS-vf-zWU"/>
+                        <outlet property="birthPlaceTextField" destination="hDe-FK-wdc" id="EfO-34-9NG"/>
+                        <outlet property="bloodTypePicker" destination="xGC-NN-wQa" id="GTy-bq-DU5"/>
+                        <outlet property="contactNameTextField" destination="dEq-d4-wGE" id="5n6-xJ-1TX"/>
+                        <outlet property="contactPhoneTextField" destination="Sw8-dB-UgF" id="Khc-bi-vHr"/>
+                        <outlet property="diseasesTextView" destination="7ue-qc-sed" id="pzb-c1-ZCZ"/>
+                        <outlet property="medicinesTextView" destination="bY0-v7-UTp" id="Wpj-bS-s5u"/>
+                        <outlet property="nameTextField" destination="u8z-xx-UJR" id="5kc-br-5ik"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0q-11-XfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -487,7 +522,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qiw-7I-fQK" userLabel="TAJ Stack View">
-                                                <rect key="frame" x="20" y="134" width="374" height="34"/>
+                                                <rect key="frame" x="20" y="218" width="374" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAJ szám" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1i1-cx-KdF">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
@@ -515,7 +550,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MmP-3Z-iWg" userLabel="Birth place Stack View">
-                                                <rect key="frame" x="20" y="218" width="374" height="34"/>
+                                                <rect key="frame" x="20" y="302" width="374" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Születési hely" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f98-C2-gVK">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
@@ -530,7 +565,7 @@
                                                         <rect key="frame" x="130" y="0.0" width="244" height="34"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="address-level2"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -540,7 +575,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JwQ-80-0yn" userLabel="Birth date Stack View">
-                                                <rect key="frame" x="20" y="302" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="386" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Születési idő" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQ5-YM-5Jw">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
@@ -563,7 +598,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="erJ-69-XSL" userLabel="Blood type Stack View">
-                                                <rect key="frame" x="20" y="402" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="486" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vércsoport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9L-1P-vaq">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -588,7 +623,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vRq-ER-SJS" userLabel="Diseases Stack View">
-                                                <rect key="frame" x="20" y="502" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="586" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betegségek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EN3-JF-hm7">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -617,7 +652,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CEj-Ys-QQi" userLabel="Medicines Stack View">
-                                                <rect key="frame" x="20" y="602" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="686" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Szedett gyógyszerek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMs-vi-6ed">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -646,7 +681,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PcY-fk-5KE" userLabel="SMS text Stack View">
-                                                <rect key="frame" x="20" y="702" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="786" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMS szöveg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bc-mF-EAW">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -663,6 +698,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="QYM-RN-vOo"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
@@ -672,8 +708,8 @@
                                                     <constraint firstItem="4bc-mF-EAW" firstAttribute="leading" secondItem="PcY-fk-5KE" secondAttribute="leading" id="pbS-Af-pd2"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WFB-aK-Adf" userLabel="Name Stack View">
-                                                <rect key="frame" x="20" y="802" width="374" height="34"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WFB-aK-Adf" userLabel="Contact name Stack View">
+                                                <rect key="frame" x="20" y="886" width="374" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hozzátartzó neve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7a-Fw-jHc">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="34"/>
@@ -684,7 +720,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1LA-oW-NiI">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1LA-oW-NiI" userLabel="Contact Name Text Field">
                                                         <rect key="frame" x="170" y="0.0" width="204" height="34"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -700,8 +736,8 @@
                                                     <constraint firstItem="1LA-oW-NiI" firstAttribute="top" secondItem="WFB-aK-Adf" secondAttribute="top" id="rCx-wX-JPE"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lb7-Sd-ZL4" userLabel="Name Stack View">
-                                                <rect key="frame" x="20" y="886" width="374" height="34"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lb7-Sd-ZL4" userLabel="Contact phone Stack View">
+                                                <rect key="frame" x="20" y="970" width="374" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefonszáma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBM-qU-zz0">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="34"/>
@@ -712,11 +748,11 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rBT-51-3yk">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rBT-51-3yk" userLabel="Contact Phone Text Field">
                                                         <rect key="frame" x="170" y="0.0" width="204" height="34"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -728,42 +764,63 @@
                                                     <constraint firstItem="rBT-51-3yk" firstAttribute="top" secondItem="Lb7-Sd-ZL4" secondAttribute="top" id="w1h-Gb-H0O"/>
                                                 </constraints>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zcG-DT-rvD" userLabel="Address Stack View">
+                                                <rect key="frame" x="20" y="134" width="374" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lakcím" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0t-6Q-NFp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="120" id="r1h-PS-74s"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4za-XO-AAY">
+                                                        <rect key="frame" x="130" y="0.0" width="244" height="34"/>
+                                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="qiw-7I-fQK" secondAttribute="trailing" constant="20" id="1xm-j1-7Qh"/>
-                                            <constraint firstAttribute="trailing" secondItem="MmP-3Z-iWg" secondAttribute="trailing" constant="20" id="4Z3-xr-DUb"/>
-                                            <constraint firstItem="MmP-3Z-iWg" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="5zu-KB-69d"/>
-                                            <constraint firstItem="PcY-fk-5KE" firstAttribute="top" secondItem="CEj-Ys-QQi" secondAttribute="bottom" constant="50" id="7eA-eh-GWS"/>
-                                            <constraint firstAttribute="trailing" secondItem="CEj-Ys-QQi" secondAttribute="trailing" constant="20" id="7kw-60-63t"/>
+                                            <constraint firstAttribute="trailing" secondItem="WFB-aK-Adf" secondAttribute="trailing" constant="20" id="0wa-ZM-roA"/>
+                                            <constraint firstItem="MmP-3Z-iWg" firstAttribute="top" secondItem="qiw-7I-fQK" secondAttribute="bottom" constant="50" id="5z4-2a-2LX"/>
+                                            <constraint firstAttribute="trailing" secondItem="PcY-fk-5KE" secondAttribute="trailing" constant="20" id="6RN-DN-ZBg"/>
                                             <constraint firstItem="JAm-8V-uwv" firstAttribute="centerX" secondItem="Vvt-2J-yGQ" secondAttribute="centerX" id="A1W-em-QCw"/>
-                                            <constraint firstItem="PcY-fk-5KE" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="AOL-05-E4r"/>
-                                            <constraint firstItem="Lb7-Sd-ZL4" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="CH4-Ib-tOp"/>
-                                            <constraint firstItem="WFB-aK-Adf" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="DcY-k4-m8o"/>
-                                            <constraint firstItem="MmP-3Z-iWg" firstAttribute="centerX" secondItem="Vvt-2J-yGQ" secondAttribute="centerX" id="Fks-Oi-L4K"/>
-                                            <constraint firstAttribute="trailing" secondItem="PcY-fk-5KE" secondAttribute="trailing" constant="20" id="Hxb-Of-R3T"/>
+                                            <constraint firstItem="vRq-ER-SJS" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="Akr-Li-ZM6"/>
+                                            <constraint firstItem="JwQ-80-0yn" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="BRv-hc-CmO"/>
+                                            <constraint firstItem="zcG-DT-rvD" firstAttribute="top" secondItem="JAm-8V-uwv" secondAttribute="bottom" constant="50" id="DIE-8p-ZF8"/>
+                                            <constraint firstAttribute="trailing" secondItem="CEj-Ys-QQi" secondAttribute="trailing" constant="20" id="Gx9-1J-4Tl"/>
+                                            <constraint firstAttribute="trailing" secondItem="JwQ-80-0yn" secondAttribute="trailing" constant="20" id="HYc-X4-BTE"/>
+                                            <constraint firstAttribute="trailing" secondItem="qiw-7I-fQK" secondAttribute="trailing" constant="20" id="IWM-i7-9cm"/>
+                                            <constraint firstItem="MmP-3Z-iWg" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="JCz-FF-5c1"/>
                                             <constraint firstAttribute="height" constant="2000" id="Jkr-q0-wMk"/>
-                                            <constraint firstAttribute="trailing" secondItem="Lb7-Sd-ZL4" secondAttribute="trailing" constant="20" id="MhH-cH-Cb3"/>
-                                            <constraint firstAttribute="trailing" secondItem="JwQ-80-0yn" secondAttribute="trailing" constant="20" id="NHK-qY-qeB"/>
-                                            <constraint firstItem="Lb7-Sd-ZL4" firstAttribute="top" secondItem="WFB-aK-Adf" secondAttribute="bottom" constant="50" id="OPh-6o-aXs"/>
-                                            <constraint firstItem="qiw-7I-fQK" firstAttribute="centerX" secondItem="Vvt-2J-yGQ" secondAttribute="centerX" id="PMP-ci-GjX"/>
-                                            <constraint firstAttribute="trailing" secondItem="WFB-aK-Adf" secondAttribute="trailing" constant="20" id="RXB-Zg-bCm"/>
-                                            <constraint firstItem="MmP-3Z-iWg" firstAttribute="top" secondItem="qiw-7I-fQK" secondAttribute="bottom" constant="50" id="RfJ-IY-t88"/>
+                                            <constraint firstItem="PcY-fk-5KE" firstAttribute="top" secondItem="CEj-Ys-QQi" secondAttribute="bottom" constant="50" id="Mla-o1-SyK"/>
+                                            <constraint firstItem="zcG-DT-rvD" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="PrF-RF-KD1"/>
+                                            <constraint firstItem="qiw-7I-fQK" firstAttribute="top" secondItem="zcG-DT-rvD" secondAttribute="bottom" constant="50" id="SGN-9P-M3w"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lb7-Sd-ZL4" secondAttribute="trailing" constant="20" id="SNp-Ch-PTY"/>
+                                            <constraint firstItem="Lb7-Sd-ZL4" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="T4i-57-611"/>
                                             <constraint firstAttribute="trailing" secondItem="JAm-8V-uwv" secondAttribute="trailing" constant="20" id="UWF-nB-5Zf"/>
-                                            <constraint firstItem="vRq-ER-SJS" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="UnA-BY-QuW"/>
-                                            <constraint firstAttribute="trailing" secondItem="vRq-ER-SJS" secondAttribute="trailing" constant="20" id="XDf-K1-RZD"/>
-                                            <constraint firstItem="erJ-69-XSL" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="and-2H-B5H"/>
-                                            <constraint firstAttribute="trailing" secondItem="erJ-69-XSL" secondAttribute="trailing" constant="20" id="biO-vh-ri3"/>
+                                            <constraint firstAttribute="trailing" secondItem="erJ-69-XSL" secondAttribute="trailing" constant="20" id="XF3-e4-r53"/>
+                                            <constraint firstAttribute="trailing" secondItem="MmP-3Z-iWg" secondAttribute="trailing" constant="20" id="YzD-Sp-s0Y"/>
+                                            <constraint firstItem="CEj-Ys-QQi" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="a3a-27-wgI"/>
                                             <constraint firstItem="JAm-8V-uwv" firstAttribute="top" secondItem="Vvt-2J-yGQ" secondAttribute="top" constant="50" id="dXY-Zn-lbe"/>
-                                            <constraint firstItem="CEj-Ys-QQi" firstAttribute="top" secondItem="vRq-ER-SJS" secondAttribute="bottom" constant="50" id="hdA-Fk-Pyh"/>
-                                            <constraint firstItem="erJ-69-XSL" firstAttribute="top" secondItem="JwQ-80-0yn" secondAttribute="bottom" constant="50" id="iRr-7N-1ro"/>
-                                            <constraint firstItem="qiw-7I-fQK" firstAttribute="top" secondItem="JAm-8V-uwv" secondAttribute="bottom" constant="50" id="j1F-3c-yHn"/>
-                                            <constraint firstItem="vRq-ER-SJS" firstAttribute="top" secondItem="erJ-69-XSL" secondAttribute="bottom" constant="50" id="lAV-AR-5hM"/>
-                                            <constraint firstItem="qiw-7I-fQK" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="njW-np-USZ"/>
-                                            <constraint firstItem="CEj-Ys-QQi" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="rVw-3J-Gtk"/>
-                                            <constraint firstItem="JwQ-80-0yn" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="tEp-JU-If7"/>
-                                            <constraint firstItem="JwQ-80-0yn" firstAttribute="top" secondItem="MmP-3Z-iWg" secondAttribute="bottom" constant="50" id="udd-3v-g0G"/>
-                                            <constraint firstItem="WFB-aK-Adf" firstAttribute="top" secondItem="PcY-fk-5KE" secondAttribute="bottom" constant="50" id="yNq-rW-KDT"/>
+                                            <constraint firstItem="WFB-aK-Adf" firstAttribute="top" secondItem="PcY-fk-5KE" secondAttribute="bottom" constant="50" id="grT-0I-bbs"/>
+                                            <constraint firstItem="vRq-ER-SJS" firstAttribute="top" secondItem="erJ-69-XSL" secondAttribute="bottom" constant="50" id="hcz-OL-MeJ"/>
+                                            <constraint firstItem="Lb7-Sd-ZL4" firstAttribute="top" secondItem="WFB-aK-Adf" secondAttribute="bottom" constant="50" id="iGb-Vp-uzx"/>
+                                            <constraint firstItem="JwQ-80-0yn" firstAttribute="top" secondItem="MmP-3Z-iWg" secondAttribute="bottom" constant="50" id="jUx-KF-iun"/>
+                                            <constraint firstItem="erJ-69-XSL" firstAttribute="top" secondItem="JwQ-80-0yn" secondAttribute="bottom" constant="50" id="kxH-b3-zRL"/>
+                                            <constraint firstItem="WFB-aK-Adf" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="mPM-ma-Af9"/>
+                                            <constraint firstItem="qiw-7I-fQK" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="nd6-vZ-CPX"/>
+                                            <constraint firstAttribute="trailing" secondItem="vRq-ER-SJS" secondAttribute="trailing" constant="20" id="oEI-L7-f0t"/>
+                                            <constraint firstItem="CEj-Ys-QQi" firstAttribute="top" secondItem="vRq-ER-SJS" secondAttribute="bottom" constant="50" id="pQU-cl-w4c"/>
+                                            <constraint firstItem="erJ-69-XSL" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="qx1-cn-9xa"/>
+                                            <constraint firstItem="PcY-fk-5KE" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="xGr-7s-TK9"/>
+                                            <constraint firstAttribute="trailing" secondItem="zcG-DT-rvD" secondAttribute="trailing" constant="20" id="yEm-6R-e4d"/>
                                             <constraint firstItem="JAm-8V-uwv" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="z9p-q5-4Y7"/>
                                         </constraints>
                                     </view>
@@ -808,14 +865,15 @@
                     <connections>
                         <outlet property="SMSTextView" destination="FlY-fA-2bI" id="7qU-9C-6LJ"/>
                         <outlet property="TAJTextField" destination="YXA-eZ-b2I" id="Hms-ks-WDc"/>
+                        <outlet property="addressTextField" destination="4za-XO-AAY" id="GKI-Cq-HkG"/>
                         <outlet property="birthDatePicker" destination="CtR-Um-bUt" id="aVV-yU-iTF"/>
                         <outlet property="birthPlaceTextField" destination="rgE-Nd-4Yc" id="r2J-Ls-aPO"/>
                         <outlet property="bloodTypePicker" destination="mVy-p9-D0d" id="d2E-Y8-SoW"/>
+                        <outlet property="contactNameTextField" destination="1LA-oW-NiI" id="F6I-mi-ZI6"/>
+                        <outlet property="contactPhoneTextField" destination="rBT-51-3yk" id="zRo-Kj-L4u"/>
                         <outlet property="diseasesTextView" destination="LUJ-5A-QQ2" id="IU0-8F-oo3"/>
                         <outlet property="medicinesTextView" destination="LIf-cH-8g8" id="6tO-Wv-axh"/>
                         <outlet property="nameTextField" destination="xXP-g9-5Dk" id="gnb-f8-Ii3"/>
-                        <outlet property="relativeNameTextField" destination="1LA-oW-NiI" id="bQm-eP-ziT"/>
-                        <outlet property="relativePhoneTextField" destination="rBT-51-3yk" id="1kX-z1-whr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dji-4J-0F8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
