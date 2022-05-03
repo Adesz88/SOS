@@ -36,7 +36,7 @@ class EmergencyViewController: UIViewController{
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //loadUser()
+        loadUser()
     }
     
     @IBAction func LocationButtonPressed(_ sender: UIButton) {

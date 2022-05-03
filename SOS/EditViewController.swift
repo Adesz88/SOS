@@ -47,7 +47,7 @@ class EditViewController: UIViewController{
     }
     
     @IBAction func SaveButton(_ sender: UIBarButtonItem) {
-        if(true) { //TODO: mezők ellenőrzése
+        if (!nameTextField.text!.isEmpty && !addressTextField.text!.isEmpty && !TAJTextField.text!.isEmpty && !birthPlaceTextField.text!.isEmpty && !diseasesTextView.text!.isEmpty && !medicinesTextView.text!.isEmpty && !SMSTextView.text!.isEmpty && !contactNameTextField.text!.isEmpty && !contactPhoneTextField.text!.isEmpty) {
             if(!users.isEmpty) {
                editUser()
             } else {
@@ -74,13 +74,22 @@ class EditViewController: UIViewController{
             print(error)
         }
         
-        if(!users.isEmpty) {
+        if (!users.isEmpty) {
             nameTextField.text = users[0].value(forKeyPath: "name") as? String
             addressTextField.text = users[0].value(forKeyPath: "address") as? String
             TAJTextField.text = String((users[0].value(forKey: "taj_number") as? Int32 ?? 0))
             birthPlaceTextField.text = users[0].value(forKeyPath: "birth_place") as? String
             birthDatePicker.date = users[0].value(forKeyPath: "birth_date") as? Date ?? Date.now
-            //bloodTypePicker
+            
+            var index = 0
+            for i in 0..<bloodTypes.count{
+                if (bloodTypes[i].contains((users[0].value(forKeyPath: "blood_type") as? String)!)){
+                    index = i
+                    break
+                }
+            }
+            bloodTypePicker.selectRow(index, inComponent: 0, animated: false)
+            
             diseasesTextView.text = users[0].value(forKeyPath: "diseases") as? String
             medicinesTextView.text = users[0].value(forKeyPath: "medicines") as? String
             SMSTextView.text = users[0].value(forKeyPath: "sms_text") as? String
@@ -95,8 +104,7 @@ class EditViewController: UIViewController{
         users[0].setValue(Int(TAJTextField.text ?? "0"), forKey: "taj_number")
         users[0].setValue(birthPlaceTextField.text, forKey: "birth_place")
         users[0].setValue(birthDatePicker.date, forKey: "birth_date")
-        //users[0].setValue(bloodTypePicker.text, forKey: "blood_type")
-        users[0].setValue("B+", forKey: "blood_type")
+        users[0].setValue(bloodTypes[bloodTypePicker.selectedRow(inComponent: 0)], forKey: "blood_type")
         users[0].setValue(diseasesTextView.text, forKey: "diseases")
         users[0].setValue(medicinesTextView.text, forKey: "medicines")
         users[0].setValue(SMSTextView.text, forKey: "sms_text")
@@ -120,7 +128,7 @@ class EditViewController: UIViewController{
         user.setValue(Int(TAJTextField.text ?? "0"), forKey: "taj_number")
         user.setValue(birthPlaceTextField.text, forKey: "birth_place")
         user.setValue(birthDatePicker.date, forKey: "birth_date")
-        //user.setValue(bloodTypePicker.text, forKey: "blood_type")
+        users[0].setValue(bloodTypes[bloodTypePicker.selectedRow(inComponent: 0)], forKey: "blood_type")
         user.setValue(diseasesTextView.text, forKey: "diseases")
         user.setValue(medicinesTextView.text, forKey: "medicines")
         user.setValue(SMSTextView.text, forKey: "sms_text")
@@ -144,7 +152,6 @@ extension EditViewController: UIPickerViewDataSource, UIPickerViewDelegate{
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "test"
+        return bloodTypes[row]
     }
-    
 }

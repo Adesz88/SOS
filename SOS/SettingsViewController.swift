@@ -23,10 +23,13 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var contactPhoneTextField: UITextField!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let bloodTypes = ["A+", "A-", "B+", "B-", "AB+", "AB-", "0+", "0-"]
     var users: [NSManagedObject] = []
     
     override func viewWillAppear(_ animated: Bool) {
         print("settings viewWillAppear")
+        bloodTypePicker.dataSource = self
+        bloodTypePicker.delegate = self
         loadUser()
         if(!users.isEmpty){
             print(users)
@@ -37,11 +40,12 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         print("settings viewDidLoad")
         // Do any additional setup after loading the view.
-        //loadUser()
+        loadUser()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         print("settings viewDidAppear")
+        loadUser()//csak innen nyitja meg az editet
         
     }
     
@@ -64,7 +68,16 @@ class SettingsViewController: UIViewController {
             TAJTextField.text = String((users[0].value(forKey: "taj_number") as? Int32 ?? 0))
             birthPlaceTextField.text = users[0].value(forKeyPath: "birth_place") as? String
             birthDatePicker.date = users[0].value(forKeyPath: "birth_date") as? Date ?? Date.now
-            //bloodTypePicker
+            
+            var index = 0
+            for i in 0..<bloodTypes.count{
+                if (bloodTypes[i].contains((users[0].value(forKeyPath: "blood_type") as? String)!)){
+                    index = i
+                    break
+                }
+            }
+            bloodTypePicker.selectRow(index, inComponent: 0, animated: false)
+            
             diseasesTextView.text = users[0].value(forKeyPath: "diseases") as? String
             medicinesTextView.text = users[0].value(forKeyPath: "medicines") as? String
             SMSTextView.text = users[0].value(forKeyPath: "sms_text") as? String
@@ -105,5 +118,18 @@ class SettingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return bloodTypes.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return bloodTypes[row]
+    }
 }
