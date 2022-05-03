@@ -26,6 +26,7 @@ class SettingsViewController: UIViewController {
     var users: [NSManagedObject] = []
     
     override func viewWillAppear(_ animated: Bool) {
+        print("settings viewWillAppear")
         loadUser()
         if(!users.isEmpty){
             print(users)
@@ -34,7 +35,14 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("settings viewDidLoad")
         // Do any additional setup after loading the view.
+        //loadUser()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("settings viewDidAppear")
+        
     }
     
     @IBAction func DeleteButtonPressed(_ sender: UIButton) {
@@ -42,7 +50,6 @@ class SettingsViewController: UIViewController {
     }
     
     func loadUser() {
-        
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
         
         do {
@@ -56,13 +63,17 @@ class SettingsViewController: UIViewController {
             addressTextField.text = users[0].value(forKeyPath: "address") as? String
             TAJTextField.text = String((users[0].value(forKey: "taj_number") as? Int32 ?? 0))
             birthPlaceTextField.text = users[0].value(forKeyPath: "birth_place") as? String
-            birthDatePicker.date = users[0].value(forKeyPath: "birth_place") as? Date ?? Date.distantFuture
+            birthDatePicker.date = users[0].value(forKeyPath: "birth_date") as? Date ?? Date.now
             //bloodTypePicker
             diseasesTextView.text = users[0].value(forKeyPath: "diseases") as? String
             medicinesTextView.text = users[0].value(forKeyPath: "medicines") as? String
             SMSTextView.text = users[0].value(forKeyPath: "sms_text") as? String
             contactNameTextField.text = users[0].value(forKeyPath: "contact_name") as? String
             contactPhoneTextField.text = users[0].value(forKeyPath: "contact_phone") as? String
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let editVC = storyboard.instantiateViewController(withIdentifier: "EditViewController")
+            show(editVC, sender: self)
         }
     }
     
@@ -77,9 +88,13 @@ class SettingsViewController: UIViewController {
             print(error)
         }
         loadUser()
-        // TODO: present(EmergencyViewController(), animated: true)
     }
     
+    func reload(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let editVC = storyboard.instantiateViewController(withIdentifier: "SettingsViewController")
+        present(editVC, animated: true)
+    }
 
     /*
     // MARK: - Navigation

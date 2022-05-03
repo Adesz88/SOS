@@ -24,40 +24,16 @@
                                     <action selector="LocationButtonPressed:" destination="xaJ-6a-Ewr" eventType="touchUpInside" id="RH2-C5-20c"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jI-Gr-MkK">
-                                <rect key="frame" x="20" y="513" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNc-cC-Ul5">
-                                <rect key="frame" x="67" y="474" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LfF-zb-leC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="F4D-OB-7cS" firstAttribute="top" secondItem="LfF-zb-leC" secondAttribute="top" constant="339" id="3SO-sB-14W"/>
                             <constraint firstItem="F4D-OB-7cS" firstAttribute="leading" secondItem="LfF-zb-leC" secondAttribute="leading" constant="167" id="4dT-OA-TBR"/>
-                            <constraint firstItem="3jI-Gr-MkK" firstAttribute="top" secondItem="gNc-cC-Ul5" secondAttribute="bottom" constant="18" id="9PT-RT-DVr"/>
-                            <constraint firstItem="3jI-Gr-MkK" firstAttribute="top" secondItem="gNc-cC-Ul5" secondAttribute="bottom" constant="18" id="BaI-fo-iD8"/>
-                            <constraint firstItem="LfF-zb-leC" firstAttribute="trailing" secondItem="gNc-cC-Ul5" secondAttribute="trailing" constant="67" id="PPp-ok-vaP"/>
-                            <constraint firstItem="3jI-Gr-MkK" firstAttribute="leading" secondItem="LfF-zb-leC" secondAttribute="leading" constant="20" id="SV9-7a-uNa"/>
-                            <constraint firstItem="LfF-zb-leC" firstAttribute="trailing" secondItem="3jI-Gr-MkK" secondAttribute="trailing" constant="20" id="diN-7m-bEe"/>
                             <constraint firstItem="LfF-zb-leC" firstAttribute="trailing" secondItem="F4D-OB-7cS" secondAttribute="trailing" constant="167" id="eNq-Y4-Lqo"/>
-                            <constraint firstItem="gNc-cC-Ul5" firstAttribute="top" secondItem="F4D-OB-7cS" secondAttribute="bottom" constant="43" id="fZR-1R-SIn"/>
-                            <constraint firstItem="LfF-zb-leC" firstAttribute="bottom" secondItem="3jI-Gr-MkK" secondAttribute="bottom" constant="279" id="oT6-5J-afc"/>
-                            <constraint firstItem="gNc-cC-Ul5" firstAttribute="leading" secondItem="LfF-zb-leC" secondAttribute="leading" constant="67" id="vki-Be-xgw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Segélyhívás" image="phone" catalog="system" id="AVx-bb-fJt"/>
-                    <connections>
-                        <outlet property="Label" destination="3jI-Gr-MkK" id="Chq-11-1Wb"/>
-                        <outlet property="LocationLabel" destination="gNc-cC-Ul5" id="MOy-Cr-aPa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqv-23-yLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,9 +53,7 @@
                                     <navigationItem id="7Ea-Jm-eJM">
                                         <barButtonItem key="rightBarButtonItem" title="Szerkesztés" id="q3f-4z-Rmf">
                                             <connections>
-                                                <segue destination="nLp-GU-Vc5" kind="popoverPresentation" popoverAnchorBarButtonItem="q3f-4z-Rmf" id="yLw-mO-Qlr">
-                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                </segue>
+                                                <segue destination="nLp-GU-Vc5" kind="show" id="yLw-mO-Qlr"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -482,7 +456,7 @@
         <!--Edit View Controller-->
         <scene sceneID="5DX-ji-Uc9">
             <objects>
-                <viewController id="nLp-GU-Vc5" customClass="EditViewController" customModule="SOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nLp-GU-Vc5" customClass="EditViewController" customModule="SOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UFu-gT-0fr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -862,6 +836,7 @@
                             <constraint firstItem="NXg-Eu-vbi" firstAttribute="leading" secondItem="UFu-gT-0fr" secondAttribute="leading" id="yfs-Lk-Vnm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="n6E-Qq-clv"/>
                     <connections>
                         <outlet property="SMSTextView" destination="FlY-fA-2bI" id="7qU-9C-6LJ"/>
                         <outlet property="TAJTextField" destination="YXA-eZ-b2I" id="Hms-ks-WDc"/>
