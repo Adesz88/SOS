@@ -22,9 +22,6 @@ class EmergencyViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*Button.frame = CGRect(x: 160, y: 100, width: 50, height: 50)
-        Button.layer.cornerRadius = 0.5 * Button.bounds.size.width
-        Button.clipsToBounds = true*/
         
         ParseJSON()
         
@@ -39,7 +36,7 @@ class EmergencyViewController: UIViewController{
         loadUser()
     }
     
-    @IBAction func LocationButtonPressed(_ sender: UIButton) {
+    @IBAction func SOSButtonPressed(_ sender: UIButton) {
         locationManager.startUpdatingLocation()
     }
     
@@ -85,6 +82,7 @@ class EmergencyViewController: UIViewController{
         }
         
         loadUser()
+        makeSMSText()
         let alert = UIAlertController(title: "Hívás", message: "\(hunType) hívása a \(phoneNumber) számon." + text ,preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
         present(alert, animated: true)
@@ -100,6 +98,14 @@ class EmergencyViewController: UIViewController{
             print(error)
         }
         
+        if(users.isEmpty) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let editVC = storyboard.instantiateViewController(withIdentifier: "EditViewController")
+            show(editVC, sender: self)
+        }
+    }
+    
+    func makeSMSText(){
         if(!users.isEmpty) {
             let name = users[0].value(forKeyPath: "name") as? String
             let address = users[0].value(forKeyPath: "address") as? String
@@ -114,10 +120,6 @@ class EmergencyViewController: UIViewController{
             let contactPhone = users[0].value(forKeyPath: "contact_phone") as? String
             
             text = "\n\n SMS küldése a \(contactPhone!) számra.\n\n\n Kedves \(contactName!)!\n\n\(name!) mentőt hívott az SOS alkalmazás segítségével. \nAz alábbi SMS szöveggel:\n\n \(SMS!)\n\nTartózkodási koordinátái: \(coord!.latitude) \(coord!.longitude)\nTAJ száma: \(TAJ)\nSzületési adtai: \(birthPlace!), \(birthDate!)\nLakcíme: \(address!)\nVércsoportja: \(bloodType!)\nBetegségei: \(diseases!)\nSzedett gyógyszerei: \(medicines!)"
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let editVC = storyboard.instantiateViewController(withIdentifier: "EditViewController")
-            show(editVC, sender: self)
         }
     }
     

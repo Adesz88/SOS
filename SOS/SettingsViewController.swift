@@ -38,18 +38,24 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("settings viewDidLoad")
-        // Do any additional setup after loading the view.
-        loadUser()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         print("settings viewDidAppear")
-        loadUser()//csak innen nyitja meg az editet
+        checkEmptyUser()//csak innen nyitja meg az editet
         
     }
     
+    override func viewDidLayoutSubviews() {
+        print("settings viewDidLayoutSubviews")
+        loadUser()
+    }
+    
     @IBAction func DeleteButtonPressed(_ sender: UIButton) {
+        let deleteAlert = UIAlertController(title: "Felhasználói adatok törlése", message: "Biztosan törölni szeretnéd az összes adatot?", preferredStyle: .alert)
+        deleteAlert.addAction(UIAlertAction(title: "Igen", style: .destructive, handler: {_ in self.deleteUser()}))
+        deleteAlert.addAction(UIAlertAction(title: "Nem", style: .cancel))
+        present(deleteAlert, animated: true)
         deleteUser()
     }
     
@@ -83,7 +89,11 @@ class SettingsViewController: UIViewController {
             SMSTextView.text = users[0].value(forKeyPath: "sms_text") as? String
             contactNameTextField.text = users[0].value(forKeyPath: "contact_name") as? String
             contactPhoneTextField.text = users[0].value(forKeyPath: "contact_phone") as? String
-        } else {
+        }
+    }
+    
+    func checkEmptyUser(){
+        if(users.isEmpty) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let editVC = storyboard.instantiateViewController(withIdentifier: "EditViewController")
             show(editVC, sender: self)
@@ -100,7 +110,20 @@ class SettingsViewController: UIViewController {
         } catch let error {
             print(error)
         }
+        
+        nameTextField.text = ""
+        addressTextField.text = ""
+        TAJTextField.text = ""
+        birthPlaceTextField.text = ""
+        birthDatePicker.date = Date.now
+        bloodTypePicker.selectRow(0, inComponent: 0, animated: false)
+        diseasesTextView.text = ""
+        medicinesTextView.text = ""
+        SMSTextView.text = ""
+        contactNameTextField.text = ""
+        contactPhoneTextField.text = ""
         loadUser()
+        checkEmptyUser()
     }
     
     func reload(){

@@ -16,21 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4D-OB-7cS">
-                                <rect key="frame" x="167" y="383" width="80" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glH-om-lr2">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="JOe-rS-k9k"/>
+                                    <constraint firstAttribute="width" constant="300" id="d32-vF-3zv"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Helyzet lekérése"/>
+                                <buttonConfiguration key="configuration" style="filled" title="SOS" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="100"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="LocationButtonPressed:" destination="xaJ-6a-Ewr" eventType="touchUpInside" id="RH2-C5-20c"/>
+                                    <action selector="SOSButtonPressed:" destination="xaJ-6a-Ewr" eventType="touchUpInside" id="tIk-jP-z7E"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segélyhívó alkalmazás" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go8-cQ-7fR">
+                                <rect key="frame" x="20" y="94" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LfF-zb-leC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="F4D-OB-7cS" firstAttribute="top" secondItem="LfF-zb-leC" secondAttribute="top" constant="339" id="3SO-sB-14W"/>
-                            <constraint firstItem="F4D-OB-7cS" firstAttribute="leading" secondItem="LfF-zb-leC" secondAttribute="leading" constant="167" id="4dT-OA-TBR"/>
-                            <constraint firstItem="LfF-zb-leC" firstAttribute="trailing" secondItem="F4D-OB-7cS" secondAttribute="trailing" constant="167" id="eNq-Y4-Lqo"/>
+                            <constraint firstItem="glH-om-lr2" firstAttribute="centerY" secondItem="Ee7-h7-Mgb" secondAttribute="centerY" id="30E-4R-O4f"/>
+                            <constraint firstItem="glH-om-lr2" firstAttribute="centerX" secondItem="Ee7-h7-Mgb" secondAttribute="centerX" id="GPz-W9-nCr"/>
+                            <constraint firstItem="go8-cQ-7fR" firstAttribute="top" secondItem="LfF-zb-leC" secondAttribute="top" constant="50" id="LQV-Lu-rrP"/>
+                            <constraint firstItem="LfF-zb-leC" firstAttribute="trailing" secondItem="go8-cQ-7fR" secondAttribute="trailing" constant="20" id="qQm-5f-3jv"/>
+                            <constraint firstItem="go8-cQ-7fR" firstAttribute="leading" secondItem="LfF-zb-leC" secondAttribute="leading" constant="20" id="skC-bB-Uzi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Segélyhívás" image="phone" catalog="system" id="AVx-bb-fJt"/>
@@ -336,14 +352,6 @@
                                                     <constraint firstItem="cvK-nN-iFm" firstAttribute="top" secondItem="pRx-Lc-8zM" secondAttribute="top" id="zFt-gL-nRH"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReS-55-QcZ">
-                                                <rect key="frame" x="20" y="1054" width="374" height="31"/>
-                                                <color key="tintColor" systemColor="systemRedColor"/>
-                                                <buttonConfiguration key="configuration" style="tinted" title="Adatok törlése"/>
-                                                <connections>
-                                                    <action selector="DeleteButtonPressed:" destination="xOl-zA-EUP" eventType="touchUpInside" id="E0M-sp-gAe"/>
-                                                </connections>
-                                            </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WWi-zP-DoH" userLabel="Address Stack View">
                                                 <rect key="frame" x="20" y="134" width="374" height="34"/>
                                                 <subviews>
@@ -364,10 +372,20 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-Od-XQp">
+                                                <rect key="frame" x="20" y="1054" width="374" height="31"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="tintColor" systemColor="systemRedColor"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Adatok törlése">
+                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="DeleteButtonPressed:" destination="xOl-zA-EUP" eventType="touchUpInside" id="0Uz-FE-iGj"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="ReS-55-QcZ" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="0fS-qA-jC4"/>
                                             <constraint firstItem="bHy-Xz-lfu" firstAttribute="centerX" secondItem="8VA-VD-urv" secondAttribute="centerX" id="2lK-5S-3AE"/>
                                             <constraint firstAttribute="trailing" secondItem="r4L-vZ-CXC" secondAttribute="trailing" constant="20" id="4Qj-QB-chy"/>
                                             <constraint firstItem="YkN-5N-MLN" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="5gB-iu-zk2"/>
@@ -385,13 +403,14 @@
                                             <constraint firstItem="pRx-Lc-8zM" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="PvJ-Dy-pjX"/>
                                             <constraint firstItem="bHy-Xz-lfu" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="Q8A-CE-5ZR"/>
                                             <constraint firstItem="EVr-TY-XEe" firstAttribute="top" secondItem="qWf-X1-eXj" secondAttribute="bottom" constant="50" id="S1O-lI-ePL"/>
+                                            <constraint firstItem="Ay2-Od-XQp" firstAttribute="top" secondItem="pRx-Lc-8zM" secondAttribute="bottom" constant="50" id="SbL-7V-vI2"/>
                                             <constraint firstAttribute="trailing" secondItem="WWi-zP-DoH" secondAttribute="trailing" constant="20" id="WgV-lG-era"/>
                                             <constraint firstItem="Etm-6N-Rad" firstAttribute="top" secondItem="EVr-TY-XEe" secondAttribute="bottom" constant="50" id="WyV-yU-EbX"/>
                                             <constraint firstItem="eWZ-v8-BDd" firstAttribute="top" secondItem="WWi-zP-DoH" secondAttribute="bottom" constant="50" id="afp-0d-adJ"/>
                                             <constraint firstItem="qWf-X1-eXj" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="bMf-To-Qhi"/>
                                             <constraint firstItem="pRx-Lc-8zM" firstAttribute="top" secondItem="r4L-vZ-CXC" secondAttribute="bottom" constant="50" id="cK8-2H-H3F"/>
                                             <constraint firstAttribute="trailing" secondItem="qWf-X1-eXj" secondAttribute="trailing" constant="20" id="eSJ-qP-X8q"/>
-                                            <constraint firstAttribute="trailing" secondItem="ReS-55-QcZ" secondAttribute="trailing" constant="20" id="fqb-DU-5fC"/>
+                                            <constraint firstItem="Ay2-Od-XQp" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="gRg-7w-9QJ"/>
                                             <constraint firstItem="bHy-Xz-lfu" firstAttribute="top" secondItem="8VA-VD-urv" secondAttribute="top" constant="50" id="iaH-IH-Alr"/>
                                             <constraint firstItem="r4L-vZ-CXC" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="jkD-PX-JEQ"/>
                                             <constraint firstAttribute="trailing" secondItem="bHy-Xz-lfu" secondAttribute="trailing" constant="20" id="kRP-gM-Tgl"/>
@@ -402,8 +421,8 @@
                                             <constraint firstAttribute="trailing" secondItem="NWR-Iq-ORc" secondAttribute="trailing" constant="20" id="qYV-qP-16r"/>
                                             <constraint firstAttribute="trailing" secondItem="eWZ-v8-BDd" secondAttribute="trailing" constant="20" id="tBF-Yi-fhg"/>
                                             <constraint firstAttribute="trailing" secondItem="KHR-3i-6P7" secondAttribute="trailing" constant="20" id="wpu-3P-eyc"/>
-                                            <constraint firstItem="ReS-55-QcZ" firstAttribute="top" secondItem="pRx-Lc-8zM" secondAttribute="bottom" constant="50" id="wvp-ga-SUc"/>
                                             <constraint firstItem="r4L-vZ-CXC" firstAttribute="top" secondItem="KHR-3i-6P7" secondAttribute="bottom" constant="50" id="xYO-y2-8wg"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ay2-Od-XQp" secondAttribute="trailing" constant="20" id="y28-HY-iIb"/>
                                             <constraint firstItem="WWi-zP-DoH" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="yYQ-vO-Sfc"/>
                                         </constraints>
                                     </view>
@@ -572,10 +591,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="erJ-69-XSL" userLabel="Blood type Stack View">
-                                                <rect key="frame" x="20" y="486" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="486" width="374" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vércsoport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9L-1P-vaq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="160" id="wbE-41-8yU"/>
                                                         </constraints>
@@ -584,9 +603,9 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVy-p9-D0d">
-                                                        <rect key="frame" x="170" y="0.0" width="204" height="50"/>
+                                                        <rect key="frame" x="170" y="0.0" width="204" height="80"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="XxQ-7z-7Ww"/>
+                                                            <constraint firstAttribute="height" constant="80" id="XxQ-7z-7Ww"/>
                                                         </constraints>
                                                     </pickerView>
                                                 </subviews>
@@ -597,7 +616,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vRq-ER-SJS" userLabel="Diseases Stack View">
-                                                <rect key="frame" x="20" y="586" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="616" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betegségek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EN3-JF-hm7">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -626,7 +645,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CEj-Ys-QQi" userLabel="Medicines Stack View">
-                                                <rect key="frame" x="20" y="686" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="716" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Szedett gyógyszerek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMs-vi-6ed">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -655,7 +674,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PcY-fk-5KE" userLabel="SMS text Stack View">
-                                                <rect key="frame" x="20" y="786" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="816" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMS szöveg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bc-mF-EAW">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -683,7 +702,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WFB-aK-Adf" userLabel="Contact name Stack View">
-                                                <rect key="frame" x="20" y="886" width="374" height="34"/>
+                                                <rect key="frame" x="20" y="916" width="374" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hozzátartzó neve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7a-Fw-jHc">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="34"/>
@@ -711,7 +730,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lb7-Sd-ZL4" userLabel="Contact phone Stack View">
-                                                <rect key="frame" x="20" y="970" width="374" height="34"/>
+                                                <rect key="frame" x="20" y="1000" width="374" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefonszáma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBM-qU-zz0">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="34"/>

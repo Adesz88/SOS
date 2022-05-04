@@ -40,7 +40,7 @@ class EditViewController: UIViewController{
     
     override func viewDidAppear(_ animated: Bool) {
         if(users.isEmpty) {
-            let noUserAlert = UIAlertController(title: "Nincsenek adatok regisztrálva", message: "Az alkalmazás használatához kérlek töltsd ki az adatokat", preferredStyle: .alert)
+            let noUserAlert = UIAlertController(title: "Hiányzó felhasználói adatok", message: "Az alkalmazás használatához kérlek töltsd ki az adatokat", preferredStyle: .alert)
             noUserAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(noUserAlert, animated: true)
         }
@@ -53,13 +53,9 @@ class EditViewController: UIViewController{
             } else {
                 saveUser()
             }
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let settingsVC: SettingsViewController = storyboard.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
             dismiss(animated: true)
-            //present(settingsVC, animated: false)
-            // TODO: SettingsViewController.loadUser()
         } else {
-            let emptyFields = UIAlertController(title: "Hiányzó adatok", message: "Az alkalmazás használatához kérlek töltsd ki az összes mezőt", preferredStyle: .alert)
+            let emptyFields = UIAlertController(title: "Üres adatmezők", message: "Az alkalmazás használatához kérlek töltsd ki az összes mezőt", preferredStyle: .alert)
             emptyFields.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(emptyFields, animated: true)
         }
@@ -128,7 +124,7 @@ class EditViewController: UIViewController{
         user.setValue(Int(TAJTextField.text ?? "0"), forKey: "taj_number")
         user.setValue(birthPlaceTextField.text, forKey: "birth_place")
         user.setValue(birthDatePicker.date, forKey: "birth_date")
-        users[0].setValue(bloodTypes[bloodTypePicker.selectedRow(inComponent: 0)], forKey: "blood_type")
+        user.setValue(bloodTypes[bloodTypePicker.selectedRow(inComponent: 0)], forKey: "blood_type")
         user.setValue(diseasesTextView.text, forKey: "diseases")
         user.setValue(medicinesTextView.text, forKey: "medicines")
         user.setValue(SMSTextView.text, forKey: "sms_text")
