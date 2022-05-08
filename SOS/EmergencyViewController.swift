@@ -22,11 +22,11 @@ class EmergencyViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+          
         ParseJSON()
         
         locationManager.requestWhenInUseAuthorization()
-        if (CLLocationManager.locationServicesEnabled()){
+        if (CLLocationManager.locationServicesEnabled()) {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
         }
@@ -40,9 +40,9 @@ class EmergencyViewController: UIViewController{
         locationManager.startUpdatingLocation()
     }
     
-    func showSOSActionSheet(){
+    func showSOSActionSheet() {
         print(country!)
-        let actionSheet = UIAlertController(title: "Hívás", message: "Melyik szervet szeretnéd felhívni?", preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: "Hívás", message: "Melyik segélyhívó számot szeretné felhívni?", preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Mentő", style: .default, handler: { action in
             self.manageSOSAction(type: "ambulance")
         }))
@@ -59,30 +59,34 @@ class EmergencyViewController: UIViewController{
         present(actionSheet, animated: true)
     }
     
-    func manageSOSAction(type: String){
+    func manageSOSAction(type: String) {
         var phoneNumber = String()
         var hunType = String()
+        var hunTypeinfl = String()
         for number in (ememergencyNumbers?.numbers)! {
             if (number.Country.Name.contains(country!)){
                 switch type {
                 case "police":
                     phoneNumber = number.Police.All.first!!
                     hunType = "Rendőr"
+                    hunTypeinfl = "rendőrt"
                     
                 case "fire":
                     phoneNumber = number.Fire.All.first!!
                     hunType = "Tűzoltó"
+                    hunTypeinfl = "tűzoltót"
 
                 default:
                     phoneNumber = number.Ambulance.All.first!!
                     hunType = "Mentő"
+                    hunTypeinfl = "mentőt"
                 }
                 break
             }
         }
         
         loadUser()
-        makeSMSText()
+        makeSMSText(typeinfl: hunTypeinfl)
         let alert = UIAlertController(title: "Hívás", message: "\(hunType) hívása a \(phoneNumber) számon." + text ,preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
         present(alert, animated: true)
@@ -98,15 +102,15 @@ class EmergencyViewController: UIViewController{
             print(error)
         }
         
-        if(users.isEmpty) {
+        if (users.isEmpty) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let editVC = storyboard.instantiateViewController(withIdentifier: "EditViewController")
             show(editVC, sender: self)
         }
     }
     
-    func makeSMSText(){
-        if(!users.isEmpty) {
+    func makeSMSText(typeinfl: String) {
+        if (!users.isEmpty) {
             let name = users[0].value(forKeyPath: "name") as? String
             let address = users[0].value(forKeyPath: "address") as? String
             let TAJ = String((users[0].value(forKey: "taj_number") as? Int32 ?? 0))
@@ -119,7 +123,7 @@ class EmergencyViewController: UIViewController{
             let contactName = users[0].value(forKeyPath: "contact_name") as? String
             let contactPhone = users[0].value(forKeyPath: "contact_phone") as? String
             
-            text = "\n\n SMS küldése a \(contactPhone!) számra.\n\n\n Kedves \(contactName!)!\n\n\(name!) mentőt hívott az SOS alkalmazás segítségével. \nAz alábbi SMS szöveggel:\n\n \(SMS!)\n\nTartózkodási koordinátái: \(coord!.latitude) \(coord!.longitude)\nTAJ száma: \(TAJ)\nSzületési adtai: \(birthPlace!), \(birthDate!)\nLakcíme: \(address!)\nVércsoportja: \(bloodType!)\nBetegségei: \(diseases!)\nSzedett gyógyszerei: \(medicines!)"
+            text = "\n\n SMS küldése a \(contactPhone!) számra.\n\n\n Kedves \(contactName!)!\n\n\(name!) \(typeinfl) hívott az SOS alkalmazás segítségével. \nAz alábbi SMS szöveggel:\n\n \(SMS!)\n\nTartózkodási koordinátái: \(coord!.latitude) \(coord!.longitude)\nTAJ száma: \(TAJ)\nSzületési adtai: \(birthPlace!), \(birthDate!)\nLakcíme: \(address!)\nVércsoportja: \(bloodType!)\nBetegségei: \n\(diseases!)\nSzedett gyógyszerei: \n\(medicines!)"
         }
     }
     
@@ -128,23 +132,25 @@ class EmergencyViewController: UIViewController{
             completion(placemarks?.first?.locality,
                        placemarks?.first?.country,
                        error)
+            if (error != nil) {
+                let alert = UIAlertController(title: "Nincs hálózati kapcsolat", message: "Az ország lekérdezéséhez internetkapcsolat szükséges" ,preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+                self.present(alert, animated: true)
+            }
         }
+        
     }
     
     private func ParseJSON(){
-        guard let path = Bundle.main.path(forResource: "List-Of-Emergency-Telephone-Numbers", ofType: "json") else{
+        guard let path = Bundle.main.path(forResource: "List-Of-Emergency-Telephone-Numbers", ofType: "json") else {
             return
         }
+        
         let url = URL(fileURLWithPath: path)
+        
         do{
             let jsonData = try Data(contentsOf: url)
             ememergencyNumbers = try JSONDecoder().decode(EmergencyNumbers.self, from: jsonData)
-            
-            /*if let result = ememergencyNumbers{
-                //print(result)
-            } else{
-                print("Failed to parse")
-            }*/
             return
         } catch{
             print("Error \(error)")
@@ -154,13 +160,12 @@ class EmergencyViewController: UIViewController{
 
 extension EmergencyViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let coordinate: CLLocationCoordinate2D = manager.location?.coordinate else{return}
+        locationManager.stopUpdatingLocation()
+        guard let coordinate: CLLocationCoordinate2D = manager.location?.coordinate else{ return }
         coord = coordinate
         guard let location: CLLocation = manager.location else { return }
         
-        locationManager.stopUpdatingLocation()
-        
-        print("locations = \(coordinate.latitude) \(coordinate.longitude)")
+        print("location: \(coordinate.latitude) \(coordinate.longitude)")
         
         fetchCityAndCountry(from: location) { city, country, error in
             guard let city = city, country != nil, error == nil else { return }

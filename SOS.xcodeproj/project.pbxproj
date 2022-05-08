@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		66201E3628197029005FBA24 /* EmergencyNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66201E3528197029005FBA24 /* EmergencyNumbers.swift */; };
 		66301121281DC2C000F253DD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66301120281DC2C000F253DD /* EditViewController.swift */; };
+		664F0E652826F6C3006AC441 /* sos_180.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 664F0E642826F6C3006AC441 /* sos_180.jpg */; };
+		664F0E682826F741006AC441 /* sos_80.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 664F0E662826F741006AC441 /* sos_80.jpg */; };
+		664F0E692826F741006AC441 /* sos_120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 664F0E672826F741006AC441 /* sos_120.jpg */; };
 		66508B9C281943FA00CE0290 /* List-Of-Emergency-Telephone-Numbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 66508B9B281943FA00CE0290 /* List-Of-Emergency-Telephone-Numbers.json */; };
 		66508B9E2819453200CE0290 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66508B9D2819453200CE0290 /* SettingsViewController.swift */; };
 		667875E228183A2900C43DF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667875E128183A2900C43DF9 /* AppDelegate.swift */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		66201E3528197029005FBA24 /* EmergencyNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyNumbers.swift; sourceTree = "<group>"; };
 		66301120281DC2C000F253DD /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		664F0E642826F6C3006AC441 /* sos_180.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sos_180.jpg; sourceTree = "<group>"; };
+		664F0E662826F741006AC441 /* sos_80.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sos_80.jpg; sourceTree = "<group>"; };
+		664F0E672826F741006AC441 /* sos_120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sos_120.jpg; sourceTree = "<group>"; };
 		66508B9B281943FA00CE0290 /* List-Of-Emergency-Telephone-Numbers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "List-Of-Emergency-Telephone-Numbers.json"; sourceTree = "<group>"; };
 		66508B9D2819453200CE0290 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		667875DE28183A2900C43DF9 /* SOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +84,9 @@
 				667875EA28183A2900C43DF9 /* SOS.xcdatamodeld */,
 				66508B9B281943FA00CE0290 /* List-Of-Emergency-Telephone-Numbers.json */,
 				66201E3528197029005FBA24 /* EmergencyNumbers.swift */,
+				664F0E642826F6C3006AC441 /* sos_180.jpg */,
+				664F0E662826F741006AC441 /* sos_80.jpg */,
+				664F0E672826F741006AC441 /* sos_120.jpg */,
 			);
 			path = SOS;
 			sourceTree = "<group>";
@@ -141,8 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				66508B9C281943FA00CE0290 /* List-Of-Emergency-Telephone-Numbers.json in Resources */,
+				664F0E682826F741006AC441 /* sos_80.jpg in Resources */,
 				667875F128183A2A00C43DF9 /* LaunchScreen.storyboard in Resources */,
 				667875EE28183A2A00C43DF9 /* Assets.xcassets in Resources */,
+				664F0E692826F741006AC441 /* sos_120.jpg in Resources */,
+				664F0E652826F6C3006AC441 /* sos_180.jpg in Resources */,
 				667875E928183A2900C43DF9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

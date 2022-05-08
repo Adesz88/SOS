@@ -27,11 +27,12 @@ class SettingsViewController: UIViewController {
     var users: [NSManagedObject] = []
     
     override func viewWillAppear(_ animated: Bool) {
-        print("settings viewWillAppear")
         bloodTypePicker.dataSource = self
         bloodTypePicker.delegate = self
+        
         loadUser()
-        if(!users.isEmpty){
+        
+        if (!users.isEmpty) {
             print(users)
         }
     }
@@ -41,22 +42,19 @@ class SettingsViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("settings viewDidAppear")
-        checkEmptyUser()//csak innen nyitja meg az editet
+        checkEmptyUser()
         
     }
     
     override func viewDidLayoutSubviews() {
-        print("settings viewDidLayoutSubviews")
         loadUser()
     }
     
     @IBAction func DeleteButtonPressed(_ sender: UIButton) {
-        let deleteAlert = UIAlertController(title: "Felhasználói adatok törlése", message: "Biztosan törölni szeretnéd az összes adatot?", preferredStyle: .alert)
+        let deleteAlert = UIAlertController(title: "Felhasználói adatok törlése", message: "Biztosan törölni szeretné az összes adatot?", preferredStyle: .alert)
         deleteAlert.addAction(UIAlertAction(title: "Igen", style: .destructive, handler: {_ in self.deleteUser()}))
         deleteAlert.addAction(UIAlertAction(title: "Nem", style: .cancel))
         present(deleteAlert, animated: true)
-        deleteUser()
     }
     
     func loadUser() {
@@ -68,7 +66,7 @@ class SettingsViewController: UIViewController {
             print(error)
         }
         
-        if(!users.isEmpty) {
+        if (!users.isEmpty) {
             nameTextField.text = users[0].value(forKeyPath: "name") as? String
             addressTextField.text = users[0].value(forKeyPath: "address") as? String
             TAJTextField.text = String((users[0].value(forKey: "taj_number") as? Int32 ?? 0))
@@ -92,8 +90,8 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    func checkEmptyUser(){
-        if(users.isEmpty) {
+    func checkEmptyUser() {
+        if (users.isEmpty) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let editVC = storyboard.instantiateViewController(withIdentifier: "EditViewController")
             show(editVC, sender: self)
@@ -122,25 +120,16 @@ class SettingsViewController: UIViewController {
         SMSTextView.text = ""
         contactNameTextField.text = ""
         contactPhoneTextField.text = ""
+        
         loadUser()
         checkEmptyUser()
     }
     
-    func reload(){
+    func reload() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let editVC = storyboard.instantiateViewController(withIdentifier: "SettingsViewController")
         present(editVC, animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
 extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate{

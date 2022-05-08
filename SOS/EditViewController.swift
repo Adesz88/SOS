@@ -10,7 +10,6 @@ import CoreData
 
 class EditViewController: UIViewController{
     
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var TAJTextField: UITextField!
@@ -30,17 +29,17 @@ class EditViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         bloodTypePicker.dataSource = self
         bloodTypePicker.delegate = self
+        
         loadUser()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if(users.isEmpty) {
-            let noUserAlert = UIAlertController(title: "Hiányzó felhasználói adatok", message: "Az alkalmazás használatához kérlek töltsd ki az adatokat", preferredStyle: .alert)
+        if (users.isEmpty) {
+            let noUserAlert = UIAlertController(title: "Hiányzó felhasználói adatok", message: "Az alkalmazás használatához kérem töltse ki az adatokat", preferredStyle: .alert)
             noUserAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(noUserAlert, animated: true)
         }
@@ -48,14 +47,16 @@ class EditViewController: UIViewController{
     
     @IBAction func SaveButton(_ sender: UIBarButtonItem) {
         if (!nameTextField.text!.isEmpty && !addressTextField.text!.isEmpty && !TAJTextField.text!.isEmpty && !birthPlaceTextField.text!.isEmpty && !diseasesTextView.text!.isEmpty && !medicinesTextView.text!.isEmpty && !SMSTextView.text!.isEmpty && !contactNameTextField.text!.isEmpty && !contactPhoneTextField.text!.isEmpty) {
-            if(!users.isEmpty) {
+            
+            if (!users.isEmpty) {
                editUser()
             } else {
                 saveUser()
             }
+            
             dismiss(animated: true)
         } else {
-            let emptyFields = UIAlertController(title: "Üres adatmezők", message: "Az alkalmazás használatához kérlek töltsd ki az összes mezőt", preferredStyle: .alert)
+            let emptyFields = UIAlertController(title: "Üres adatmezők", message: "Az alkalmazás használatához kérem töltse ki az összes mezőt", preferredStyle: .alert)
             emptyFields.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(emptyFields, animated: true)
         }
@@ -117,7 +118,6 @@ class EditViewController: UIViewController{
     func saveUser() {
         let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
         let user = NSManagedObject(entity: entity!, insertInto: context)
-        //TODO: mentés
         
         user.setValue(nameTextField.text, forKey: "name")
         user.setValue(addressTextField.text, forKey: "address")
@@ -130,6 +130,7 @@ class EditViewController: UIViewController{
         user.setValue(SMSTextView.text, forKey: "sms_text")
         user.setValue(contactNameTextField.text, forKey: "contact_name")
         user.setValue(contactPhoneTextField.text, forKey: "contact_phone")
+        
         do {
             try context.save()
         } catch let error {

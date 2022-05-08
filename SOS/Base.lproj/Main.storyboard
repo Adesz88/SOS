@@ -32,7 +32,7 @@
                                     <action selector="SOSButtonPressed:" destination="xaJ-6a-Ewr" eventType="touchUpInside" id="tIk-jP-z7E"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segélyhívó alkalmazás" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go8-cQ-7fR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segélyhívás" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go8-cQ-7fR">
                                 <rect key="frame" x="20" y="94" width="374" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -79,7 +79,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8VA-VD-urv">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bHy-Xz-lfu" userLabel="Name Stack View">
                                                 <rect key="frame" x="20" y="50" width="374" height="34"/>
@@ -390,7 +390,7 @@
                                             <constraint firstAttribute="trailing" secondItem="r4L-vZ-CXC" secondAttribute="trailing" constant="20" id="4Qj-QB-chy"/>
                                             <constraint firstItem="YkN-5N-MLN" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="5gB-iu-zk2"/>
                                             <constraint firstItem="Etm-6N-Rad" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="9pU-X7-a7a"/>
-                                            <constraint firstAttribute="height" constant="2000" id="A0C-h5-vMZ"/>
+                                            <constraint firstAttribute="height" constant="1400" id="A0C-h5-vMZ"/>
                                             <constraint firstAttribute="trailing" secondItem="YkN-5N-MLN" secondAttribute="trailing" constant="20" id="B8M-y5-A1E"/>
                                             <constraint firstItem="EVr-TY-XEe" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="CzO-CO-Kes"/>
                                             <constraint firstItem="eWZ-v8-BDd" firstAttribute="leading" secondItem="8VA-VD-urv" secondAttribute="leading" constant="20" id="ES4-Se-uHr"/>
@@ -484,7 +484,7 @@
                                 <rect key="frame" x="0.0" y="56" width="414" height="730"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vvt-2J-yGQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JAm-8V-uwv" userLabel="Name Stack View">
                                                 <rect key="frame" x="20" y="50" width="374" height="34"/>
@@ -791,7 +791,7 @@
                                             <constraint firstAttribute="trailing" secondItem="JwQ-80-0yn" secondAttribute="trailing" constant="20" id="HYc-X4-BTE"/>
                                             <constraint firstAttribute="trailing" secondItem="qiw-7I-fQK" secondAttribute="trailing" constant="20" id="IWM-i7-9cm"/>
                                             <constraint firstItem="MmP-3Z-iWg" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="JCz-FF-5c1"/>
-                                            <constraint firstAttribute="height" constant="2000" id="Jkr-q0-wMk"/>
+                                            <constraint firstAttribute="height" constant="1600" id="Jkr-q0-wMk"/>
                                             <constraint firstItem="PcY-fk-5KE" firstAttribute="top" secondItem="CEj-Ys-QQi" secondAttribute="bottom" constant="50" id="Mla-o1-SyK"/>
                                             <constraint firstItem="zcG-DT-rvD" firstAttribute="leading" secondItem="Vvt-2J-yGQ" secondAttribute="leading" constant="20" id="PrF-RF-KD1"/>
                                             <constraint firstItem="qiw-7I-fQK" firstAttribute="top" secondItem="zcG-DT-rvD" secondAttribute="bottom" constant="50" id="SGN-9P-M3w"/>
