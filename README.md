@@ -1,2 +1,2 @@
 # SOS
-University Swift development curse project
+University Swift development course project
