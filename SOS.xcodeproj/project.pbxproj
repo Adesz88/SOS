@@ -322,6 +322,7 @@
 				DEVELOPMENT_TEAM = 9NG48CXTPZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SOS/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Szükséges a segélyhíváshoz";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -333,7 +334,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = adam.SOS;
+				PRODUCT_BUNDLE_IDENTIFIER = AdamO.SOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -351,6 +352,7 @@
 				DEVELOPMENT_TEAM = 9NG48CXTPZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SOS/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Szükséges a segélyhíváshoz";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -362,7 +364,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = adam.SOS;
+				PRODUCT_BUNDLE_IDENTIFIER = AdamO.SOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
